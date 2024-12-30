@@ -12,7 +12,14 @@ st.write("Ask me to analyze an image for liver classification. Upload an image a
 # Load the pre-trained model
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("../stage-1/liver_classification_model.h5")
+    model_path = "../stage-1/liver_classification_model.h5"
+    if not os.path.exists(model_path):
+        st.warning("Downloading model file. Please wait...")
+        url = "https://drive.google.com/file/d/1k458RYuN_Xpf_c7Z2zTntlfXQOcHZNlx/view?usp=sharing"  
+        response = requests.get(url)
+        with open(model_path, "wb") as f:
+            f.write(response.content)
+    return tf.keras.models.load_model(model_path)
 
 model = load_model()
 
