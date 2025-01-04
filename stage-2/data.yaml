@@ -1,0 +1,13 @@
+train: D:/projects/detection/stage-2/dataset/train/images
+val: D:/projects/detection/stage-2/dataset/val/images
+
+
+nc: 4
+names: ['discolored_patch', 'left_region', 'normal_tongue', 'right_region']
+
+roboflow:
+  workspace: jawerias-workspace
+  project: tongue-dieseases
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/jawerias-workspace/tongue-dieseases/dataset/2
