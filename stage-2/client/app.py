@@ -22,8 +22,7 @@ if uploaded_file is not None:
     
     if response.status_code == 200:
         result = response.json()
-        # Display custom message
-        st.success(result["message"])
+        # st.success(result["message"])
         with st.chat_message("assistant"):
                 # st.image(bot_avatar, width=40)  # Show bot avatar
                 st.markdown(result["message"])
