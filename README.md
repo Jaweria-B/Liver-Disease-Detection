@@ -53,8 +53,8 @@ The FastAPI server provides an endpoint for liver detection:
 
 ## Project Structure
 
-- `liver_detection_bot.py`: Main Streamlit app file.
-- `app.py`: FastAPI app that processes the image and provides predictions.
+- `app.py`: Main Streamlit app file.
+- `main.py`: FastAPI app that processes the image and provides predictions.
 - `requirements.txt`: List of Python dependencies for the project.
 
 ## Contributing
