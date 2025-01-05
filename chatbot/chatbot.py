@@ -1,3 +1,5 @@
+import os
+import requests
 import streamlit as st
 from PIL import Image
 import tensorflow as tf
