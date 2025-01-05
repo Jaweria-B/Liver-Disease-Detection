@@ -48,7 +48,7 @@ async def predict(image: UploadFile = File(...)):
                 f"{confidence * 100:.2f}% confidence. This might suggest a liver-related issue. "
                 "Please seek medical advice for proper diagnosis."
             )
-        elif pred_class == "dispatched_color":
+        elif pred_class == "discolored_patch":
             response["message"] = (
                 "The tongue appears to have a discolored or cracked surface, which is often associated with "
                 "symptoms like fatty liver disease. It’s advisable to consult a specialist."
