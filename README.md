@@ -30,14 +30,14 @@ pip install streamlit fastapi requests
     - Navigate to the folder where your FastAPI app is located and run:
 
     ```bash
-    uvicorn app:app --reload
+    uvicorn main:app --reload
     ```
 
 2. **Run the Streamlit app**:
     - Navigate to the folder containing your Streamlit app and run:
 
     ```bash
-    streamlit run liver_detection_bot.py
+    streamlit run app.py
     ```
 
     This will start a local Streamlit server, and the app will be accessible at `http://localhost:8501`.

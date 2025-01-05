@@ -28,6 +28,6 @@ if uploaded_file is not None:
                 st.markdown(result["message"])
 
         # Optionally display predictions
-        # st.json(result["predictions"])
+        st.json(result["predictions"])
     else:
         st.error("Failed to process the image. Please try again.")
