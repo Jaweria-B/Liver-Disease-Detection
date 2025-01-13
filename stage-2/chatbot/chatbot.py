@@ -10,7 +10,7 @@ st.title("🤖 Liver Detection Bot")
 st.write("Upload an image for liver classification based on tongue analysis.")
 
 # Load the YOLO model
-model = YOLO("/stage-2/runs/detect/train/weights/best.pt")
+model = YOLO("./model/best.pt")
 
 # File uploader for image input
 uploaded_file = st.file_uploader("Upload a tongue image", type=["jpg", "jpeg", "png"])
