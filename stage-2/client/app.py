@@ -13,7 +13,7 @@ uploaded_file = st.file_uploader("Upload a tongue image", type=["jpg", "jpeg", "
 
 if uploaded_file is not None:
     # Display uploaded image
-    st.image(uploaded_file, caption="Uploaded Tongue Image", use_column_width=True)
+    st.image(uploaded_file, caption="Uploaded Tongue Image", use_container_width=True)
 
     # Send image to FastAPI
     with st.spinner("Analyzing image..."):
@@ -28,6 +28,6 @@ if uploaded_file is not None:
                 st.markdown(result["message"])
 
         # Optionally display predictions
-        st.json(result["predictions"])
+        # st.json(result["predictions"])
     else:
         st.error("Failed to process the image. Please try again.")
