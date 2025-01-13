@@ -2,6 +2,9 @@ import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
 import io
+from pathlib import Path
+
+
 
 # Streamlit App Interface
 st.set_page_config(page_title="Liver Detection Bot", page_icon="🤖", layout="centered")
@@ -10,7 +13,8 @@ st.title("🤖 Liver Detection Bot")
 st.write("Upload an image for liver classification based on tongue analysis.")
 
 # Load the YOLO model
-model = YOLO("./best.pt")
+path = Path(__file__).parent / "/stage-2/runs/detect/train/weights/best.pt"
+model = YOLO(path)
 
 # File uploader for image input
 uploaded_file = st.file_uploader("Upload a tongue image", type=["jpg", "jpeg", "png"])
